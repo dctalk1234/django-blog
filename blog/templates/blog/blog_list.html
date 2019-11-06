@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h2>Most Recent Posts</h2>
+
+<ul>
+    {% for blog in blogs %}
+        <li>
+            <a href="{% url 'blog_detail' pk=blog.pk %}">{{blog.title}}</a>
+        </li>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}
