@@ -8,6 +8,7 @@ body {
 
 nav {
   text-align: center;
+  margin-top: 10px;
 }
 
 nav a {
@@ -39,11 +40,12 @@ li {
 }
 
 h1 {
+  display: inline-block;
   font: inherit;
   color: inherit;
   letter-spacing: -0.05em;
   text-decoration: none;
-  border-bottom: 1px solid black;
+  margin: 0px;
 }
 
 input {
@@ -91,5 +93,18 @@ h4 {
 h2 {
   text-align: center;
   margin-top: 50px;
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+
+header .login {
+  float: right;
+}
+
+header a {
+  font-size: 16px;
+  text-decoration: none;
 }
 /*# sourceMappingURL=blog.css.map */
