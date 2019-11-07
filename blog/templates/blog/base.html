@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stack Shack</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
     <h1>Stack Shack</h1>
@@ -16,6 +19,7 @@
         <a href="{% url 'blog_category' category='software' %}">Software Engineering</a>
     </nav>
 
+    
     {% block content %}
     {% endblock %}
 </body>

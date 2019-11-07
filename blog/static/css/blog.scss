@@ -1,0 +1,90 @@
+body {
+	font-family: "Helvetica Neue", sans-serif;
+	max-width: 50em;
+	margin: auto;
+    padding: 2em 1em;
+    background-color: #32343b;
+}
+
+nav {
+    text-align: center;
+    a {
+        margin: 2px;
+        padding: 2px;
+        background-color: #32343b;
+        color: black;
+        font-size: 25px;
+        }
+}
+a {
+    background-color: #32343b;
+    color: black;
+    font-size: 25px;
+}
+
+a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
+	margin: 0.25em;
+}
+
+h1 {
+	font: inherit;
+	color: inherit;
+	letter-spacing: -0.05em;
+	text-decoration: none;
+	border-bottom: 1px solid black;
+}
+
+input {
+	display: block;
+	margin: 5px 0 20px 0;
+	padding: 9px;
+	border: solid 1px black;
+	width: 300px;
+	background: lightgray;
+}
+textarea {
+    display: block;
+	margin: 5px 0 20px 0;
+	padding: 9px;
+	border: solid 1px black;
+	width: 300px;
+	background: lightgray;
+}
+input[type="submit"],
+a.button {
+	width: auto;
+	padding: 9px 15px;
+	background-color: rgb(113, 112, 112);
+	border: 0;
+	font-size: 14px;
+	color: whitesmoke;
+}
+
+.artist-photo {
+	width: 400px;
+}
+
+p {
+   line-height: 1.5;
+   font-size: 16px;
+   color: rgb(161, 160, 160);
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
