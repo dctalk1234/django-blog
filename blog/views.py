@@ -15,7 +15,7 @@ def blog_detail(request, pk):
     return render(request, 'blog/blog_detail.html', {'blog' : blog})
 
 def blog_category(request, category):
-    blogs = BlogPost.objects.filter(tags__contains=[category])
+    blogs = BlogPost.objects.filter(tags__contains=[category]).order_by('-created_at')
     return render(request, 'blog/blog_list.html', {'blogs' : blogs})
 
 @login_required
