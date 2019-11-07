@@ -11,5 +11,7 @@
 
     {% endfor %}
 </ul>
+{% if user.is_authenticated %}
 <a href="{% url 'blog_create' %}" class="button">New Post</a>
+{% endif %}
 {% endblock %}

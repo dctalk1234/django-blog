@@ -3,6 +3,8 @@ from .models import BlogPost
 
 from .forms import BlogPostForm
 
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def blog_list(request):
     blogs = BlogPost.objects.all()
@@ -16,6 +18,7 @@ def blog_category(request, category):
     blogs = BlogPost.objects.filter(tags__contains=[category])
     return render(request, 'blog/blog_list.html', {'blogs' : blogs})
 
+@login_required
 def blog_create(request):
     if request.method == 'POST':
         form = BlogPostForm(request.POST)
@@ -27,6 +30,7 @@ def blog_create(request):
     
     return render(request, 'blog/blog_form.html', {'form' : form})
 
+@login_required
 def blog_edit(request, pk):
     blog_post = BlogPost.objects.get(pk=pk)
 
@@ -40,6 +44,7 @@ def blog_edit(request, pk):
     
     return render(request, 'blog/blog_form.html', {'form' : form})
 
+@login_required
 def blog_delete(request, pk):
     BlogPost.objects.get(id=pk).delete()
     return redirect('blog_list')
