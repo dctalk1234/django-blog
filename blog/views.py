@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def blog_list(request):
-    blogs = BlogPost.objects.all()
+    blogs = BlogPost.objects.all().order_by('-created_at')
     return render(request, 'blog/blog_list.html', {'blogs' : blogs})
 
 def blog_detail(request, pk):

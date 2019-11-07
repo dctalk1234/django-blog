@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+import datetime
 # Create your models here.
 
 class BlogPost(models.Model):
@@ -9,3 +10,5 @@ class BlogPost(models.Model):
         models.CharField(max_length=50)
     )
     body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
